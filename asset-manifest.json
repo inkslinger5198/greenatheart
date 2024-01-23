@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/greenatheart/static/css/main.f9b96fa4.css",
+    "main.js": "/greenatheart/static/js/main.5f1bbd9b.js",
+    "static/media/pexels-valentin-s-589802.jpg": "/greenatheart/static/media/pexels-valentin-s-589802.67b041c0320cfb3385b9.jpg",
+    "static/media/16.jpg": "/greenatheart/static/media/16.885d30617361a91af380.jpg",
+    "static/media/4.jpg": "/greenatheart/static/media/4.3ccf2718c164e0cd1b4f.jpg",
+    "static/media/8.jpg": "/greenatheart/static/media/8.85d41c5c283a6697dc46.jpg",
+    "static/media/15.jpg": "/greenatheart/static/media/15.74b8dfb3ffed297f7ca1.jpg",
+    "static/media/12.jpg": "/greenatheart/static/media/12.a6cbdb35fe8310e2c7b6.jpg",
+    "static/media/13.jpg": "/greenatheart/static/media/13.ce946a273738fb09add8.jpg",
+    "static/media/10.jpg": "/greenatheart/static/media/10.87ac45b9a23452843b9b.jpg",
+    "static/media/14.jpg": "/greenatheart/static/media/14.091d126738409c1c4a4f.jpg",
+    "static/media/11.jpg": "/greenatheart/static/media/11.cea9ea19784b4c76031c.jpg",
+    "static/media/9.jpg": "/greenatheart/static/media/9.6c77c7119898dae1cdd6.jpg",
+    "index.html": "/greenatheart/index.html",
+    "main.f9b96fa4.css.map": "/greenatheart/static/css/main.f9b96fa4.css.map",
+    "main.5f1bbd9b.js.map": "/greenatheart/static/js/main.5f1bbd9b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f9b96fa4.css",
+    "static/js/main.5f1bbd9b.js"
+  ]
+}
