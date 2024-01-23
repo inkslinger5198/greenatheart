@@ -1,0 +1,56 @@
+.news {
+  display: flex;
+  flex-direction: column;
+}
+
+.news-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.news-heading h1 {
+  margin-bottom: 2rem;
+}
+.news-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.news-card {
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 2rem;
+  width: 20rem;
+}
+
+.news-card img {
+  width: 95%;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 10px;
+}
+
+.news-card button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.news-card button:hover {
+  color: green;
+}
+
+.arrow {
+  font-size: 2rem;
+}
