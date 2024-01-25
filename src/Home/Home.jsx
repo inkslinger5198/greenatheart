@@ -1,7 +1,7 @@
-import React from 'react';
-import './home.css';
+import React from "react";
+import "./home.css";
 
-import { Header, News, Banner, Gallery} from './containers';
+import { Header, Banner, Gallery, News } from "./containers";
 
 const Home = () => {
   return (
@@ -11,7 +11,7 @@ const Home = () => {
       <Banner />
       <Gallery />
     </div>
-  )
+  );
 };
 
-export default Home
+export default Home;

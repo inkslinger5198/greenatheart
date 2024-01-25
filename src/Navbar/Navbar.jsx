@@ -14,7 +14,7 @@ const Navbar = () => {
           <nav>
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/greenatheart">Home</Link>
               </li>
               <li>
                 <Link to="/about">About</Link>
@@ -56,7 +56,7 @@ const Navbar = () => {
                 <nav>
                   <ul>
                     <li>
-                      <Link to="/" onClick={() => setToggleMenu(false)}>
+                      <Link to="/greenatheart" onClick={() => setToggleMenu(false)}>
                         Home
                       </Link>
                     </li>

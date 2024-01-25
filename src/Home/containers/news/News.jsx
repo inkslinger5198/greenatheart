@@ -1,56 +1,107 @@
-import React from "react";
+import React, { Component } from "react";
+import { NewsItem } from "../../components";
 import "./news.css";
-import img1 from "../../assets/Gallery/8.jpg";
-import img2 from "../../assets/Gallery/15.jpg";
-import img3 from "../../assets/Gallery/4.jpg";
-import {
-  MdKeyboardDoubleArrowLeft,
-  MdKeyboardDoubleArrowRight,
-} from "react-icons/md";
 
-const News = () => {
-  return (
-    <div className="news">
-      <div className="news-heading">
+export class News extends Component {
+  articles = [];
+
+  constructor() {
+    super();
+    this.state = {
+      articles: [],
+      loading: false,
+      page: 1,
+    };
+  }
+
+  async componentDidMount() {
+    let url =
+      "https://newsapi.org/v2/everything?q=deforestation&apiKey=e192465df5564c0197eb691bd0ad1a13&page=1&pageSize=20";
+    let data = await fetch(url);
+    let parsedData = await data.json();
+    console.log(parsedData);
+    this.setState({
+      articles: parsedData.articles,
+      totalResults: parsedData.totalResults,
+    });
+  }
+
+  handlePrevClick = async () => {
+    console.log("previous");
+    let url = `https://newsapi.org/v2/everything?q=deforestation&apiKey=e192465df5564c0197eb691bd0ad1a13&page=${
+      this.state.page - 1
+    }&pageSize=20`;
+    let data = await fetch(url);
+    let parsedData = await data.json();
+    console.log(parsedData);
+
+    this.setState({
+      page: this.state.page - 1,
+      articles: parsedData.articles,
+    });
+  };
+
+  handleNextClick = async () => {
+    console.log("next");
+    if (Math.ceil(this.state.totalResults / 20) < this.state.page + 1) {
+    } else {
+      let url = `https://newsapi.org/v2/everything?q=deforestation&apiKey=e192465df5564c0197eb691bd0ad1a13&page=${
+        this.state.page + 1
+      }&pageSize=20`;
+      let data = await fetch(url);
+      let parsedData = await data.json();
+      console.log(parsedData);
+
+      this.setState({
+        page: this.state.page + 1,
+        articles: parsedData.articles,
+      });
+    }
+  };
+
+  render() {
+    return (
+      <div className="container my-3 news">
         <h1>Latest News</h1>
-      </div>
 
-      <div className="news-container">
-        <MdKeyboardDoubleArrowLeft className="arrow" />
-        <div className="news-card">
-          <h4>24 May</h4>
-          <h2>Lorem Ipsum Dolor Sit Amed</h2>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry...
-          </p>
-          <img src={img1} alt="news" />
-          <button>Read More</button>
+        <div className="row w-full h-full">
+          {this.state.articles.map((element) => {
+            return (
+              <div className="col-md-3">
+                <NewsItem
+                  key={element.url}
+                  title={element.title ? element.title.slice(0, 45) : ""}
+                  description={
+                    element.description ? element.description.slice(0, 88) : ""
+                  }
+                  imageURL={element.urlToImage}
+                  newsURL={element.url}
+                />
+              </div>
+            );
+          })}
         </div>
-        <div className="news-card">
-          <h4>25 Oct</h4>
-          <h2>Lorem Ipsum Dolor Sit Amed</h2>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry...
-          </p>
-          <img src={img3} alt="news" />
-          <button>Read More</button>
+        <div className="buttons-news container d-flex justify-content-between">
+          <button
+            disabled={this.state.page <= 1}
+            type="button"
+            className="btn btn-dark"
+            onClick={this.handlePrevClick}
+          >
+            {" "}
+            &larr; Previous
+          </button>
+          <button
+            type="button"
+            class="btn btn-dark"
+            onClick={this.handleNextClick}
+          >
+            Next &rarr;
+          </button>
         </div>
-        <div className="news-card">
-          <h4>28 Feb</h4>
-          <h2>Lorem Ipsum Dolor Sit Amed</h2>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry...
-          </p>
-          <img src={img2} alt="news" />
-          <button>Read More</button>
-        </div>
-        <MdKeyboardDoubleArrowRight className="arrow" />
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default News;

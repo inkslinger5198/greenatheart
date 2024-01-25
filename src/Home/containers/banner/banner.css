@@ -1,78 +1,79 @@
-.home_banner
-{
+.Banner {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: var(--color-dark);
-    padding: 5rem 5rem;
-    color: var(--color-light);
-    gap: 3rem;
-}
-
-.home_banner-title
-{
+  }
+  
+  .Banner-container {
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
-    gap: 0.75rem;
-}
-
-.home_banner-title h1
-{
-    font-size: 2rem;
-}
-
-.plant-icon
-{
-    font-size: 2rem;
-}
-
-.home_banner-CTA
-{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    gap: 3rem
-}
-
-.home_banner-CTA-card
-{
-    background:var(--color-bg);
-    color: var(--color-dark);
-    padding: 2rem;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .Banner-card {
+    background: white;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
     gap: 1rem;
-    max-width: 17.5rem;
-    height: 22.5rem;
-}
-
-.home_banner-CTA-card h2
-{
-    font-size: 1.75rem;
-    margin-bottom: 0.5rem;
-}
-
-.home_banner-CTA-card p
-{
-    font-size: 1.25rem;
-}
-
-.home_banner-CTA-card button
-{
-    padding: 0.75rem 1.5rem;
-    border: none;
+    padding: 2rem;
+    width: 20rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .Banner-card img {
+    width: 95%;
+    height: 10rem;
+    object-fit: cover;
     border-radius: 12px;
-    background: var(--color-dark);
+    margin: 10px;
+  }
+  
+  .Banner-card button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: none;
     cursor: pointer;
-    color: var(--color-bg);
-    font-size: 1rem;
-    justify-self: flex-end;
-}
+    z-index: 2;
+  }
+  
+  .Banner-card button:hover {
+    color: green;
+  }
+  
+  .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.95); /* Dark overlay */
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    color: white; /* Text color */
+    font-size: 1.5rem; /* Text size */
+    border-radius: 12px; /* Match the border radius of the card */
+    font-weight: 600;
+    text-align: center; /* Align the text horizontally */
+    z-index: 2;
+    cursor: pointer;
+  }
+ 
+  
+  .Banner-card:hover .card-overlay {
+    opacity: 1;
+  }
+
+  .card-overlay span:hover
+  {
+    color: green;
+  }
+  
