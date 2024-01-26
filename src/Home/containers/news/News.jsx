@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { NewsItem } from "../../components";
 import "./news.css";
+import { GrNext, GrPrevious } from "react-icons/gr";
 
 export class News extends Component {
   articles = [];
@@ -16,7 +17,7 @@ export class News extends Component {
 
   async componentDidMount() {
     let url =
-      "https://newsapi.org/v2/everything?q=deforestation&apiKey=e192465df5564c0197eb691bd0ad1a13&page=1&pageSize=20";
+      "https://newsapi.org/v2/everything?q=deforestation&apiKey=e192465df5564c0197eb691bd0ad1a13&page=1&pageSize=4";
     let data = await fetch(url);
     let parsedData = await data.json();
     console.log(parsedData);
@@ -30,7 +31,7 @@ export class News extends Component {
     console.log("previous");
     let url = `https://newsapi.org/v2/everything?q=deforestation&apiKey=e192465df5564c0197eb691bd0ad1a13&page=${
       this.state.page - 1
-    }&pageSize=20`;
+    }&pageSize=4`;
     let data = await fetch(url);
     let parsedData = await data.json();
     console.log(parsedData);
@@ -47,7 +48,7 @@ export class News extends Component {
     } else {
       let url = `https://newsapi.org/v2/everything?q=deforestation&apiKey=e192465df5564c0197eb691bd0ad1a13&page=${
         this.state.page + 1
-      }&pageSize=20`;
+      }&pageSize=4`;
       let data = await fetch(url);
       let parsedData = await data.json();
       console.log(parsedData);
@@ -60,43 +61,49 @@ export class News extends Component {
   };
 
   render() {
+    
     return (
-      <div className="container my-3 news">
-        <h1>Latest News</h1>
-
-        <div className="row w-full h-full">
-          {this.state.articles.map((element) => {
-            return (
-              <div className="col-md-3">
-                <NewsItem
-                  key={element.url}
-                  title={element.title ? element.title.slice(0, 45) : ""}
-                  description={
-                    element.description ? element.description.slice(0, 88) : ""
-                  }
-                  imageURL={element.urlToImage}
-                  newsURL={element.url}
-                />
-              </div>
-            );
-          })}
-        </div>
-        <div className="buttons-news container d-flex justify-content-between">
+      <div className="home_news">
+        <div className="news-heading">
+              <h1>Latest News</h1>
+            </div>
+        <div className="news-carousel-container">
           <button
             disabled={this.state.page <= 1}
             type="button"
-            className="btn btn-dark"
+            className="prev-btn"
             onClick={this.handlePrevClick}
           >
-            {" "}
-            &larr; Previous
+            <GrPrevious />
           </button>
+          
+
+          <div className="news-card-container">
+            {this.state.articles.map((element) => {
+              return (
+                <div className="news-container">
+                  <NewsItem
+                    key={element.url}
+                    title={element.title ? element.title.slice(0, 45) : ""}
+                    description={
+                      element.description
+                        ? element.description.slice(0, 88)
+                        : ""
+                    }
+                    imageURL={element.urlToImage}
+                    newsURL={element.url}
+                  />
+                </div>
+              );
+            })}
+          </div>
+
           <button
             type="button"
-            class="btn btn-dark"
+            class=" next-btn"
             onClick={this.handleNextClick}
           >
-            Next &rarr;
+            <GrNext />
           </button>
         </div>
       </div>

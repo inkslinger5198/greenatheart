@@ -1,6 +1,8 @@
 .Banner {
     display: flex;
     flex-direction: column;
+    background: var(--color-dark);
+    padding: 10rem 0rem;
   }
   
   .Banner-container {
