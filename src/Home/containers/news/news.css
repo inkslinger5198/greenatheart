@@ -16,6 +16,7 @@
   position: relative;
   overflow: hidden;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
@@ -23,7 +24,7 @@
 .news-card-container {
   display: flex;
   scroll-behavior: smooth;
-  margin: 1rem;
+  margin: 1rem 1rem 0 1rem;
 }
 
 .news-container {
@@ -55,4 +56,23 @@
 }
 .next-btn {
   right: 0;
+}
+
+.news_buttons
+{
+  padding: 0 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media screen and (max-width:975px) {
+  .news-carousel-container
+  {
+    flex-direction: column;
+  }
+  .news-card-container
+  {
+    flex-direction: column;
+  }
 }

@@ -78,4 +78,37 @@
   {
     color: green;
   }
-  
+
+  @media screen and (max-width: 1200px) {
+    .Banner-card
+    {
+      width: 18rem;
+    }
+    .Banner-card h2
+    {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media screen and (max-width:1024px) {
+    .Banner-card
+    {
+      width: 18rem;
+    }
+    .Banner-card h2
+    {
+      font-size: 1.25rem;
+    }
+    .Banner-card p
+    {
+      font-size: 1rem;
+    }
+  }
+
+  @media screen and (max-width:1000px) 
+  {
+    .Banner-container
+    {
+      flex-direction: column;
+    }
+  }
