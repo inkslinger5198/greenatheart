@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/greenatheart/static/css/main.102636ca.css",
-    "main.js": "/greenatheart/static/js/main.e0c6f70d.js",
+    "main.css": "/greenatheart/static/css/main.43a8c1cf.css",
+    "main.js": "/greenatheart/static/js/main.93b5a5d6.js",
     "static/media/pexels-valentin-s-589802.jpg": "/greenatheart/static/media/pexels-valentin-s-589802.67b041c0320cfb3385b9.jpg",
     "static/media/16.jpg": "/greenatheart/static/media/16.885d30617361a91af380.jpg",
     "static/media/4.jpg": "/greenatheart/static/media/4.3ccf2718c164e0cd1b4f.jpg",
@@ -17,11 +17,11 @@
     "static/media/Pranavi.jpg": "/greenatheart/static/media/Pranavi.84fdb8ac5397fb1f8524.jpg",
     "static/media/Pulkita.jpg": "/greenatheart/static/media/Pulkita.2d003ace3cc35832bec9.jpg",
     "index.html": "/greenatheart/index.html",
-    "main.102636ca.css.map": "/greenatheart/static/css/main.102636ca.css.map",
-    "main.e0c6f70d.js.map": "/greenatheart/static/js/main.e0c6f70d.js.map"
+    "main.43a8c1cf.css.map": "/greenatheart/static/css/main.43a8c1cf.css.map",
+    "main.93b5a5d6.js.map": "/greenatheart/static/js/main.93b5a5d6.js.map"
   },
   "entrypoints": [
-    "static/css/main.102636ca.css",
-    "static/js/main.e0c6f70d.js"
+    "static/css/main.43a8c1cf.css",
+    "static/js/main.93b5a5d6.js"
   ]
 }
