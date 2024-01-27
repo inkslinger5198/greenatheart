@@ -1,0 +1,47 @@
+.news-card
+{
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    background: var(--white);
+    padding: 0.1rem;
+    width: 18rem;
+    margin-bottom: 1rem;
+    height: auto;
+    gap: 0.5rem;
+}
+
+.news-card-image
+{
+    
+    height: 12rem;
+    margin-bottom: 0.5rem;
+}
+
+.news-card-image img
+{
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.news-card-body{
+    padding: 0rem 1rem 1rem 1rem;
+}
+
+.news-card-text
+{
+    height: 6rem;
+}
+
+.news-card-text a
+{
+    color: blue;
+    margin-left: 0.1rem;
+}
+
+.news-card-text a:hover
+{
+    color: green;
+}
+
+

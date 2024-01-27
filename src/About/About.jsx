@@ -1,14 +1,15 @@
-import React from 'react';
-import './about.css';
+import React from "react";
+import "./about.css";
 
-import { Founders, Header } from './containers';
+import { Founders, Content, Header } from "./containers";
 const About = () => {
   return (
     <div>
       <Header />
+      <Content />
       <Founders />
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import "./newsitem.css";
 export class NewsItem extends Component {
   render() {
     let { title, description, imageURL, newsURL } = this.props;
@@ -12,8 +12,8 @@ export class NewsItem extends Component {
 
     return (
       <div>
-        <div className="card" style={{ width: "18rem", marginBottom:"1rem", height:"26rem"}}>
-          <div className="card-image" style={{ height: "12rem" }}>
+        <div className="news-card">
+          <div className="news-card-image">
             <img
               style={imageStyle}
               src={
@@ -25,12 +25,14 @@ export class NewsItem extends Component {
               alt="..."
             />
           </div>
-          <div className="card-body">
-            <h6 className="card-title">{title}...</h6>
-            <p className="card-text">{description}...</p>
-            <a href={newsURL} className="btn btn-dark btn-sm">
-              Read More
-            </a>
+          <div className="news-card-body">
+            <h6 className="news-card-title">{title}...</h6>
+            <p className="news-card-text">
+              {description}... 
+              <a href={newsURL} className="read-more">
+                 Read More.
+              </a>
+            </p>
           </div>
         </div>
       </div>

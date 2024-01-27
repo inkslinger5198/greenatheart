@@ -1,0 +1,36 @@
+.about-slider-container {
+  display: flex;
+  flex-direction: row; /* Adjust if needed */
+  align-items: center; /* Center children horizontally in the container */
+  justify-content: center; /* Center children vertically in the container */
+  width: 100%; /* Full width of the container */
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.about-slider {
+  width: 90%; /* Adjust the width of the slider */
+  margin: 1rem;
+  padding: 1rem;
+  /* Explicit height might be necessary depending on your design */
+}
+
+/* Rest of your styles */
+
+.slide {
+  background: var(--white);
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Add additional CSS for styling slick controls as needed */
+
+
+
+.about-content-btn button {
+  background: none;
+  font-size: 2rem;
+  color: var(--black);
+  border: none;
+}

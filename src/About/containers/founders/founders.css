@@ -11,10 +11,11 @@
     --width-container: 600px;
 }
 
-.about_contact-header
+.about_founders-contact-header
 {
     font-family: var(--font-family);
-    font-size: 20px;
+    font-size: 1.5rem;
+    color: var(--white);
 
 }
 .about_founders {
@@ -27,10 +28,11 @@
     position: relative;
     flex-direction: column;
     gap: 50px;
-    margin: 50px;
+    
+    background: var(--black);
 }
 
-.about_card-grid {
+.about_founders-card-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-column-gap: var(--spacing-l);
@@ -40,30 +42,30 @@
 }
 
 @media(min-width: 540px) {
-    .about_card-grid {
+    .about_founders-card-grid {
         grid-template-columns: repeat(1, 1fr);
     }
 }
 
 @media(min-width: 960px) {
-    .about_card-grid {
+    .about_founders-card-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-.about_card-contact {
+.about_founders-card-contact {
     list-style: none;
     position: relative;
 }
 
-.about_card-contact:before {
+.about_founders-card-contact:before {
     content: '';
     display: block;
     padding-bottom: 150%;
     width: 100%;
 }
 
-.about_card-background {
+.about_founders-card-background {
     background-size: cover;
     background-position: center;
     border-radius: var(--spacing-l);
@@ -80,15 +82,15 @@
         transform 200ms linear;
 }
 
-.about_card-contact:hover .about_card-background {
+.about_founders-card-contact:hover .about_founders-card-background {
     transform: scale(1.05) translateZ(0);
 }
 
-.about_card-grid:hover>.card:not(:hover) .about_card-background {
+.about_founders-card-grid:hover>.card:not(:hover) .about_founders-card-background {
     filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
 }
 
-.about_card-content {
+.about_founders-card-content {
     right: 0;
     padding: var(--spacing-l);
     position: absolute;
@@ -96,7 +98,7 @@
     text-align: right;
 }
 
-.about_card-category {
+.about_founders-card-category {
     color: var(--text-light);
     font-size: 0.9rem;
     margin-bottom: var(--spacing-s);
@@ -104,7 +106,7 @@
     font-family: var(--font-family);
 }
 
-.about_card-heading{
+.about_founders-card-heading{
     color: var(--text-lighter);
     font-size: 1.9rem;
     text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
@@ -115,12 +117,12 @@
 }
 
 @media screen and (max-width: 2560px) and (min-width: 1445px) {
-    .about_contact-header
+    .about_founders-contact-header
     {
         font-size: 2rem;
         margin-right: 6rem;
     }
-    .about_card-heading {
+    .about_founders-card-heading {
         font-size: 2.5rem;
     }
 
@@ -128,7 +130,7 @@
     {
         flex-direction: row;
     }
-    .about_card-grid
+    .about_founders-card-grid
     {
         max-width: 1000px;
     }
