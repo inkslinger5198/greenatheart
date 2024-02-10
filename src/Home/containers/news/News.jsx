@@ -9,136 +9,119 @@ export class News extends Component {
     this.state = {
       articles: [],
       loading: false,
-      page: 1,
-      pageSize: 4,
+      currentCarouselPage: 0,
+      pageSize: 4, // Default pageSize
       totalResults: 0,
       errorMessage: null,
     };
   }
 
   componentDidMount() {
-    this.updatePageSize();
-    window.addEventListener("resize", this.updatePageSize);
     this.fetchArticles();
+    this.updatePageSize();
+    window.addEventListener('resize', this.updatePageSize);
   }
 
   componentWillUnmount() {
-    window.removeEventListener("resize", this.updatePageSize);
+    window.removeEventListener('resize', this.updatePageSize);
   }
 
+  updatePageSize = () => {
+    // Check if max screen width is 1024px, then set pageSize to 3, else to 4
+    const newSize = window.innerWidth <= 1024 ? 3 : 4;
+    this.setState({ pageSize: newSize });
+  };
+
   fetchArticles = async () => {
-    const { page, pageSize } = this.state;
-    let url = `https://newsapi.org/v2/everything?q=deforestation&sortBy=publishedAt&apiKey=e192465df5564c0197eb691bd0ad1a13&page=${page}&pageSize=${pageSize}&language=en`;
+    let url = `https://gnews.io/api/v4/search?q=deforestation&sortBy=publishedAt&lang=en&country=us&max=10&page=1&token=1729d733fca3705e5dbd4aa4b79ef9ec`;
+
     try {
       let data = await fetch(url);
       let parsedData = await data.json();
-      if (parsedData.status === "error") {
-        this.setState({
-          errorMessage:
-            "Currently, articles are not available. Please try again later.",
-        });
-      } else {
+      if (parsedData.articles) {
         this.setState({
           articles: parsedData.articles,
-          totalResults: parsedData.totalResults,
-          errorMessage: null,
+          totalResults: parsedData.totalArticles,
+          errorMessage: null
+        });
+      } else {
+        this.setState({ 
+          errorMessage: "Currently, articles are not available. Please try again later."
         });
       }
     } catch (error) {
       this.setState({
-        errorMessage:
-          "An error occurred while fetching articles. Please try again later.",
+        errorMessage: "An error occurred while fetching articles. Please try again later."
       });
     }
   };
 
-  updatePageSize = () => {
-    const screenWidth = window.innerWidth;
-    let pageSize = 4; // Default pageSize
-
-    if (screenWidth <= 2560 && screenWidth >= 2080) {
-      pageSize = 4;
-    } else if (screenWidth < 2080 && screenWidth > 1224) {
-      pageSize = 4;
-    } else if (screenWidth <= 1224) {
-      pageSize = 3;
-    }
-
-    this.setState({ pageSize }, this.fetchArticles);
+  handlePrevClick = () => {
+    this.setState(prevState => ({
+      currentCarouselPage: Math.max(prevState.currentCarouselPage - 1, 0),
+    }));
   };
 
-  handlePrevClick = async () => {
-    this.setState(
-      (prevState) => ({
-        page: Math.max(prevState.page - 1, 1),
-      }),
-      this.fetchArticles
-    );
+  handleNextClick = () => {
+    this.setState(prevState => ({
+      currentCarouselPage: Math.min(prevState.currentCarouselPage + 1, Math.ceil(this.state.articles.length / this.state.pageSize) - 1),
+    }));
   };
 
-  handleNextClick = async () => {
-    this.setState(
-      (prevState) => ({
-        page: prevState.page + 1,
-      }),
-      this.fetchArticles
-    );
-  };
+  renderArticles() {
+    const {articles, currentCarouselPage, pageSize} = this.state;
+    const startIndex = currentCarouselPage * pageSize;
+    const articlesToShow = articles.slice(startIndex, startIndex + pageSize);
+
+    return articlesToShow.map((article, index) => (
+      <div className="news-container" key={article.url || index}>
+        <NewsItem
+          title={article.title ? article.title.slice(0, 45) : ""}
+          description={article.description ? article.description.slice(0, 88) : ""}
+          imageURL={article.image}
+          newsURL={article.url}
+          author={article.source.name}
+          date={article.publishedAt}
+        />
+      </div>
+    ));
+  }
 
   render() {
+    const isPrevDisabled = this.state.currentCarouselPage <= 0;
+    const isNextDisabled = this.state.currentCarouselPage >= Math.ceil(this.state.articles.length / this.state.pageSize) - 1;
+
     return (
       <div className="home_news">
         <div className="news-heading">
-          <h1>Latest News</h1>
+          <h1>Insights</h1>
         </div>
         {this.state.errorMessage ? (
           <div className="error-message">{this.state.errorMessage}</div>
         ) : (
-          Array.isArray(this.state.articles) && (
-            <div className="news-carousel-container">
-              <div className="news-card-container">
-                {this.state.articles.map((element, index) => {
-                  return (
-                    <div className="news-container" key={element.url || index}>
-                      <NewsItem
-                        title={element.title ? element.title.slice(0, 45) : ""}
-                        description={
-                          element.description
-                            ? element.description.slice(0, 88)
-                            : ""
-                        }
-                        imageURL={element.urlToImage}
-                        newsURL={element.url}
-                        author={element.author}
-                        date={element.publishedAt}
-                      />
-                    </div>
-                  );
-                })}
-              </div>
-              <div className="news_buttons">
-                <button
-                  disabled={this.state.page <= 1}
-                  type="button"
-                  className="prev-btn"
-                  onClick={this.handlePrevClick}
-                >
-                  <GrLinkPrevious />
-                </button>
-                <button
-                  type="button"
-                  className="next-btn"
-                  onClick={this.handleNextClick}
-                  disabled={
-                    this.state.page >=
-                    Math.ceil(this.state.totalResults / this.state.pageSize)
-                  }
-                >
-                  <GrLinkNext />
-                </button>
-              </div>
+          <div className="news-carousel-container">
+            <div className="news-card-container">
+              {this.renderArticles()}
             </div>
-          )
+            <div className="news_buttons">
+              <button
+                disabled={isPrevDisabled}
+                type="button"
+                className="prev-btn"
+                onClick={this.handlePrevClick}
+              >
+                <GrLinkPrevious />
+              </button>
+              <button
+                disabled={isNextDisabled}
+                type="button"
+                className="next-btn"
+                onClick={this.handleNextClick}
+              >
+                <GrLinkNext />
+              </button>
+            </div>
+          </div>
         )}
       </div>
     );

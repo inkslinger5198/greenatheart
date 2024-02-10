@@ -123,6 +123,9 @@
 }
 
 @media screen and (max-width: 850px) {
+  .navbar {
+    padding: 2rem 2.5rem 1rem 2.5rem;
+  }
   .nav-lap {
     display: none;
   }

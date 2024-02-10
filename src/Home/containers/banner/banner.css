@@ -1,169 +1,231 @@
 .Banner {
-    display: flex;
-    flex-direction: column;
-    background: var(--color-dark);
-    padding: 5rem 0rem;
-  }
-  
-  .Banner-header
-  {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+  display: flex;
+  flex-direction: column;
+  background: var(--color-dark);
+  padding: 5rem 0rem;
+}
 
+.Banner-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Banner-header h1 {
+  font-size: 2.5rem;
+  color: var(--color-bg);
+  margin-bottom: 3rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.Banner-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.Banner-card {
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 2rem;
+  width: 20rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.Banner-card img {
+  width: 95%;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 10px;
+}
+
+.Banner-card button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.Banner-card button:hover {
+  color: green;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.95); /* Dark overlay */
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  color: white; /* Text color */
+  font-size: 1.5rem; /* Text size */
+  border-radius: 12px; /* Match the border radius of the card */
+  font-weight: 600;
+  text-align: center; /* Align the text horizontally */
+  z-index: 2;
+  cursor: pointer;
+}
+
+.Banner-card:hover .card-overlay {
+  opacity: 1;
+}
+
+.card-overlay span:hover {
+  color: green;
+}
+@media screen and (max-width: 2560px) and (min-width: 1500px) {
+  .Banner {
+    padding: 8rem 0;
+  }
+  .Banner-card {
+    width: 35rem;
+    padding: 3rem;
+  }
+  .Banner-card h2 {
+    font-size: 3.25rem;
+    margin-bottom: 2rem;
+  }
+  .Banner-card p {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+  .Banner-header h1 {
+    font-size: 4.75rem;
+    margin-bottom: 6rem;
+  }
+  .Banner-card img {
+    height: 17.5rem;
+    margin-bottom: 2rem;
+  }
+  .Banner-card button {
+    font-size: 1.75rem;
+  }
+  .card-overlay {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .Banner-card {
+    width: 18rem;
+  }
+  .Banner-card h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Banner-card {
+    width: 18rem;
+  }
+  .Banner-card h2 {
+    font-size: 1.25rem;
+  }
+  .Banner-card p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .Banner-container {
+    flex-direction: column;
+  }
+  .Banner-header h1
+  {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Banner-card {
+    width: 25rem;
+  }
+  .Banner-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .Banner-card p {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  .Banner-card img {
+    height: 12.5rem;
+    margin-bottom: 1rem;
+  }
+  .Banner-card button {
+    font-size: 1.25rem;
+  }
   .Banner-header h1 {
     font-size: 2.5rem;
-    color: var(--color-bg);
     margin-bottom: 3rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-  }
-
-  .Banner-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-  }
-  
-  .Banner-card {
-    background: white;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    gap: 1rem;
-    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .Banner-card {
     width: 20rem;
-    position: relative;
-    overflow: hidden;
   }
-  
+  .Banner-card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  .Banner-card p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
   .Banner-card img {
-    width: 95%;
-    height: 10rem;
-    object-fit: cover;
-    border-radius: 12px;
-    margin: 10px;
+    height: 8rem;
+    margin-bottom: 1rem;
   }
-  
   .Banner-card button {
-    padding: 0.5rem 1rem;
-    border: none;
-    background: none;
-    cursor: pointer;
-    z-index: 2;
+    font-size: 1rem;
   }
-  
-  .Banner-card button:hover {
-    color: green;
+  .Banner-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
   }
-  
-  .card-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.95); /* Dark overlay */
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    color: white; /* Text color */
-    font-size: 1.5rem; /* Text size */
-    border-radius: 12px; /* Match the border radius of the card */
-    font-weight: 600;
-    text-align: center; /* Align the text horizontally */
-    z-index: 2;
-    cursor: pointer;
-  }
- 
-  
-  .Banner-card:hover .card-overlay {
-    opacity: 1;
-  }
+}
 
-  .card-overlay span:hover
-  {
-    color: green;
+@media screen and (max-width: 400px) {
+  .Banner-card {
+    width: 18rem;
   }
-  @media screen and (max-width: 2560px) and (min-width:1500px) {
-    .Banner
-    {
-      padding: 8rem 0;
-    }
-    .Banner-card
-    {
-      width: 35rem;
-      padding: 3rem;
-    }
-    .Banner-card h2
-    {
-      font-size: 3.25rem;
-      margin-bottom: 2rem;
-    }
-    .Banner-card p
-    {
-      font-size: 1.75rem;
-      margin-bottom: 2rem;
-    }
-    .Banner-header h1
-    {
-      font-size: 4.75rem;
-      margin-bottom: 6rem;
-    }
-    .Banner-card img 
-    {
-      height: 17.5rem;
-      margin-bottom: 2rem;
-    }
-    .Banner-card button {
-      font-size: 1.75rem;
-    }
-    .card-overlay
-    {
-      font-size: 3rem;
-    }
+  .Banner-card h2 {
+    font-size: 1.15rem;
   }
-
-  @media screen and (max-width: 1200px) {
-    .Banner-card
-    {
-      width: 18rem;
-    }
-    .Banner-card h2
-    {
-      font-size: 1.5rem;
-    }
+  .Banner-card p {
+    font-size: 1rem;
   }
-
-  @media screen and (max-width:1024px) {
-    .Banner-card
-    {
-      width: 18rem;
-    }
-    .Banner-card h2
-    {
-      font-size: 1.25rem;
-    }
-    .Banner-card p
-    {
-      font-size: 1rem;
-    }
+  .Banner-card img {
+    height: 7rem;
   }
-
-  @media screen and (max-width:1000px) 
-  {
-    .Banner-container
-    {
-      flex-direction: column;
-    }
+  .Banner-card button {
+    font-size: 1rem;
   }
+  .Banner-header h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+}

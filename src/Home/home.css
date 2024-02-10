@@ -52,3 +52,44 @@
         font-size: 3rem;
     }
 }
+
+@media screen and (max-width: 550px) {
+    .home-tagline , .home-mission 
+    {
+        margin: 0 1rem;
+    }
+    .home-tagline h2
+    {
+        font-size: 1.25rem;
+    } 
+    .home-mission h2
+    {
+        font-size: 1.25rem;
+    }
+    .home-raised h2{
+        font-size: 1.5rem;
+    }
+    .home-mission button, .home-raised button
+    {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    
+    .home-tagline h2
+    {
+        font-size: 1.15rem;
+    } 
+    .home-mission h2
+    {
+        font-size: 1.15rem;
+    }
+    .home-raised h2{
+        font-size: 1.25rem;
+    }
+    .home-mission button, .home-raised button
+    {
+        font-size: 1.15rem;
+    }
+}
