@@ -1,15 +1,19 @@
 {
   "files": {
-    "main.css": "/greenatheart/static/css/main.076cc5e1.css",
-    "main.js": "/greenatheart/static/js/main.021fa703.js",
+    "main.css": "/greenatheart/static/css/main.70714758.css",
+    "main.js": "/greenatheart/static/js/main.a9d6e26c.js",
     "static/media/pexels-valentin-s-589802.jpg": "/greenatheart/static/media/pexels-valentin-s-589802.67b041c0320cfb3385b9.jpg",
+    "static/media/pexels-eberhard-grossgasteiger-2310641.jpg": "/greenatheart/static/media/pexels-eberhard-grossgasteiger-2310641.0ec51032edae53501467.jpg",
     "static/media/16.jpg": "/greenatheart/static/media/16.885d30617361a91af380.jpg",
     "static/media/4.jpg": "/greenatheart/static/media/4.3ccf2718c164e0cd1b4f.jpg",
+    "static/media/pexels-pixabay-33109.jpg": "/greenatheart/static/media/pexels-pixabay-33109.359fd09601f6e5b0ce55.jpg",
+    "static/media/pexels-skyler-ewing-7133215.jpg": "/greenatheart/static/media/pexels-skyler-ewing-7133215.19994d9b1888413bfc3a.jpg",
     "static/media/8.jpg": "/greenatheart/static/media/8.85d41c5c283a6697dc46.jpg",
     "static/media/15.jpg": "/greenatheart/static/media/15.74b8dfb3ffed297f7ca1.jpg",
     "static/media/12.jpg": "/greenatheart/static/media/12.a6cbdb35fe8310e2c7b6.jpg",
     "static/media/13.jpg": "/greenatheart/static/media/13.ce946a273738fb09add8.jpg",
     "static/media/10.jpg": "/greenatheart/static/media/10.87ac45b9a23452843b9b.jpg",
+    "static/media/pexels-ian-turnell-709552.jpg": "/greenatheart/static/media/pexels-ian-turnell-709552.8ee737c7592997db083f.jpg",
     "static/media/14.jpg": "/greenatheart/static/media/14.091d126738409c1c4a4f.jpg",
     "static/media/11.jpg": "/greenatheart/static/media/11.cea9ea19784b4c76031c.jpg",
     "static/media/9.jpg": "/greenatheart/static/media/9.6c77c7119898dae1cdd6.jpg",
@@ -21,11 +25,11 @@
     "static/media/slick.ttf": "/greenatheart/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/greenatheart/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/greenatheart/index.html",
-    "main.076cc5e1.css.map": "/greenatheart/static/css/main.076cc5e1.css.map",
-    "main.021fa703.js.map": "/greenatheart/static/js/main.021fa703.js.map"
+    "main.70714758.css.map": "/greenatheart/static/css/main.70714758.css.map",
+    "main.a9d6e26c.js.map": "/greenatheart/static/js/main.a9d6e26c.js.map"
   },
   "entrypoints": [
-    "static/css/main.076cc5e1.css",
-    "static/js/main.021fa703.js"
+    "static/css/main.70714758.css",
+    "static/js/main.a9d6e26c.js"
   ]
 }
