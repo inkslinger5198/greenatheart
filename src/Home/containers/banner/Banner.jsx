@@ -21,6 +21,9 @@ const Banner = () => {
 
   return (
     <div className="Banner">
+      <div className="Banner-header">
+        <h1>Get Involved</h1>
+      </div>
       <div className="Banner-container">
         {[
           { text: "Donate Now", img: img1, actionText: "Donate Now", link: '/donate' },

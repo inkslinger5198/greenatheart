@@ -4,3 +4,51 @@
     flex-direction: column;
     gap: 7.5rem;
 }
+
+.home-tagline, .home-mission, .home-raised h2{
+    margin:0 3rem;
+    text-align: center;
+}
+
+.home-raised span
+{
+    color: green;
+}
+
+.home-raised
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.home-mission button, .home-raised button{
+    padding: 1rem 2rem;
+    border: none;
+    background: var(--green);
+    color: var(--color-dark);
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    align-self: center;
+}
+
+.home-mission button:hover, .home-raised button:hover{
+    color: green;
+}
+
+@media screen and (max-width: 2560px) and (min-width:1500px) {
+    .home-raised h2{
+        font-size: 3.5rem;
+    }
+    .home-tagline h2, .home-mission h2
+    {
+        font-size: 3rem;
+    }
+    .home-mission button, .home-raised button
+    {
+        font-size: 3rem;
+    }
+}

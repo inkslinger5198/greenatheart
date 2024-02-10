@@ -6,7 +6,7 @@ const Header = () => {
     <div className="home_header">
       <div class="home_header-img">
         <img src={img} alt="trees"></img>
-        <div class="overlay"></div>
+        <div class="home-overlay"></div>
         <div className="home_header-text">
         <h1>Green At Heart</h1>
         <p>Our Mission is to Plant trees all around the world</p>

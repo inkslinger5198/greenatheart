@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./newsitem.css";
 export class NewsItem extends Component {
   render() {
-    let { title, description, imageURL, newsURL } = this.props;
+    let { title, description, imageURL, newsURL, author, date } = this.props;
 
     const imageStyle = {
       width: "100%",
@@ -28,10 +28,14 @@ export class NewsItem extends Component {
           <div className="news-card-body">
             <h6 className="news-card-title">{title}...</h6>
             <p className="news-card-text">
-              {description}... 
+              {description}...{" "}
               <a href={newsURL} className="read-more">
-                 Read More.
-              </a>
+                Read More.
+              </a><br/>
+              <small className="text-muted">
+                By {!author ? "Unknown" : author} on{" "}
+                {new Date(date).toGMTString()}
+              </small>
             </p>
           </div>
         </div>

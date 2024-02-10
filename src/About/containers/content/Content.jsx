@@ -11,11 +11,9 @@ const Content = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 3000,
     arrows: false, // Set this to false since we are using custom buttons
     pauseOnHover: false,
   };

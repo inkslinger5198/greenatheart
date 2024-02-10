@@ -1,0 +1,63 @@
+.member_form {
+    /* Add any specific styling for the member form container if needed */
+}
+
+.member_form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.member_form input[type="text"],
+.member_form input[type="email"],
+.member_form input[type="number"],
+.member_form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Slightly different border style */
+}
+
+.member_form input[name="purpose"]
+{
+    height: 6rem;
+
+}
+
+.member_form input[name="purpose"]::placeholder
+{
+    
+    
+}
+.member-form-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.member_form button {
+    width: fit-content;
+    padding: 0.5rem 2rem;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: rgb(45, 108, 108); /* Different background color */
+    color: white;
+}
+
+.member_form button:hover {
+    background: rgb(53, 53, 126); /* Different hover color */
+    color: white;
+}
+
+.confirmation {
+    background-color: lightblue; /* Different confirmation color */
+    color: darkblue;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+    border-radius: 5px;
+}

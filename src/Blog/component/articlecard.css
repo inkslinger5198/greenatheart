@@ -1,0 +1,55 @@
+/* Add your global styles here */
+
+.articleCard {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  background: white;
+  padding: 0.1rem;
+  width: 19rem;
+  margin-bottom: 3rem;
+  height: 29rem;
+  overflow: hidden;
+  gap: 0.5rem;
+  
+  box-shadow: 10px 10px 5px 0px #888888;
+}
+.article-card-image {
+  width: 100%;
+  height: 12rem;
+  margin-bottom: 0.25rem;
+}
+
+.article-card-image img {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  object-fit: contain;
+}
+
+.article-card-body {
+  padding: 0rem 1rem 0.5rem 1rem;
+  overflow: scroll;
+  word-wrap: break-word;
+}
+
+.article-card-text {
+  margin-bottom: 1rem;
+}
+.articleCard h2 {
+  margin-top: 10px;
+  font-size: 1.5rem; /* Adjust as needed */
+}
+
+.articleCard p {
+  margin-top: 10px; /* Adjust as needed */
+}
+
+.read-more {
+  color: blue;
+  font-size: smaller;
+  cursor: pointer;
+}
+
+.read-more:hover {
+  color: green;
+}

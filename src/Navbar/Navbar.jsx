@@ -6,6 +6,7 @@ import { BiMenuAltLeft } from "react-icons/bi";
 import { IoMdClose } from "react-icons/io";
 
 const Navbar = () => {
+  
   const [toggleMenu, setToggleMenu] = useState(false);
   return (
     <div className="navbar">
@@ -14,7 +15,7 @@ const Navbar = () => {
           <nav>
             <ul>
               <li>
-                <Link to="/greenatheart">Home</Link>
+                <Link to="/">Home</Link>
               </li>
               <li>
                 <Link to="/about">About</Link>
@@ -56,7 +57,7 @@ const Navbar = () => {
                 <nav>
                   <ul>
                     <li>
-                      <Link to="/greenatheart" onClick={() => setToggleMenu(false)}>
+                      <Link to="/" onClick={() => setToggleMenu(false)}>
                         Home
                       </Link>
                     </li>

@@ -1,0 +1,95 @@
+.progress-bar-container {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 6rem 4rem;
+    
+  }
+  .step-progress
+  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+
+  .nav-icon
+  {
+    font-size: 2rem;
+  }
+
+  .nav-icon:hover
+  {
+    color: grey;
+  }
+  .progress-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 3rem;
+    width: 100%;
+  }
+  
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+  
+  .step-number {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .step-title {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .completed .step-number {
+    background-color: #4caf50; /* Green background for completed steps */
+  }
+  
+  .navigation {
+    display: flex;
+    gap: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .step-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    width: 50rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .step-card h3 {
+    margin: 0 0 10px 0;
+  }
+  
+  .step-card p {
+    margin: 0;
+  }
+  

@@ -1,47 +1,89 @@
-.news-card
-{
-    display: flex;
-    flex-direction: column;
-    border-radius: 12px;
-    background: var(--white);
-    padding: 0.1rem;
-    width: 18rem;
+.news-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  background: white;
+  padding: 0.1rem;
+  width: 18rem;
+  margin-bottom: 1rem;
+  height: auto;
+  gap: 0.5rem;
+}
+
+.news-card-image {
+  height: 12rem;
+  margin-bottom: 0.5rem;
+}
+
+.news-card-image img {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  object-fit: contain;
+}
+
+.news-card-body {
+  padding: 0rem 1rem 1rem 1rem;
+  overflow-y: auto;
+  text-wrap: wrap;
+  word-wrap: break-word;
+}
+
+.news-card-text {
+  height: 9rem;
+}
+
+.read-more {
+  height: 5rem;
+}
+
+.news-card-text a {
+  color: blue;
+  margin-left: 0.1rem;
+}
+
+.news-card-text a:hover {
+  color: green;
+}
+
+@media screen and (max-width: 2560px) and (min-width: 1550px) {
+  .news-card {
+    width: 32.5rem;
+  }
+  .news-card-image {
+    height: 20rem;
+  }
+  .news-card-image img {
+    height: 20rem;
+  }
+  .news-card-body {
+    padding: 0rem 2rem 2rem 2rem;
+    overflow-y: auto;
+    text-wrap: wrap;
+    word-wrap: break-word;
+  }
+  .news-card-text {
+    height: 15rem;
+  }
+  .read-more {
+    height: 5rem;
+  }
+  .news-card-title {
+    font-size: 2.75rem;
     margin-bottom: 1rem;
-    height: auto;
-    gap: 0.5rem;
+    height: 10rem;
+    overflow-y: hidden;
+    text-wrap: wrap;
+    word-wrap: break-word;
+  }
+  .news-card-text {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+  .read-more {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+  .text-muted {
+    font-size: 1.5rem;
+  }
 }
-
-.news-card-image
-{
-    
-    height: 12rem;
-    margin-bottom: 0.5rem;
-}
-
-.news-card-image img
-{
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-}
-
-.news-card-body{
-    padding: 0rem 1rem 1rem 1rem;
-}
-
-.news-card-text
-{
-    height: 6rem;
-}
-
-.news-card-text a
-{
-    color: blue;
-    margin-left: 0.1rem;
-}
-
-.news-card-text a:hover
-{
-    color: green;
-}
-
-

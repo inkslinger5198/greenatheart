@@ -1,0 +1,17 @@
+.text-center
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.spinner
+{
+    width: 10rem;
+    height: 10rem;
+    animation: spin 1s linear infinite;
+    color: green;
+}

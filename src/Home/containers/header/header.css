@@ -1,7 +1,7 @@
 :root
 {
-  --height-small: 50rem;
-  --height-large:80rem;
+  --height-small: 55rem;
+  --height-large:90rem;
 }
 .home_header {
   display: flex;
@@ -25,7 +25,7 @@
   z-index: 0;
 }
 
-.overlay {
+.home-overlay {
   width: 100%;
   height: var(--height-small);
   position: absolute;
@@ -57,7 +57,7 @@
     height: var(--height-large);
   }
 
-  .overlay
+  .home-overlay
   {
     height: var(--height-large);
   }
