@@ -43,8 +43,10 @@ const ProgressBar = () => {
   return (
     <div className="progress-bar-container">
       <div className="step-progress">
-        <div className="navigation">
-          <GrFormPrevious className="nav-icon" onClick={prevStep} />
+        <div className="lap-nav-btn">
+          <div className="navigation">
+            <GrFormPrevious className="nav-icon" onClick={prevStep} />
+          </div>
         </div>
 
         <div className="progress-bar">
@@ -58,15 +60,25 @@ const ProgressBar = () => {
             </div>
           ))}
         </div>
-
-        <div className="navigation">
-          <GrFormNext className="nav-icon" onClick={nextStep} />
+        <div className="lap-nav-btn">
+          <div className="navigation">
+            <GrFormNext className="nav-icon" onClick={nextStep} />
+          </div>
         </div>
       </div>
 
       <div className="step-card">
         <h3>{steps[currentStep - 1].title}</h3>
         <p>{steps[currentStep - 1].description}</p>
+      </div>
+
+      <div className="phone-nav-btn">
+        <div className="navigation">
+          <GrFormPrevious className="nav-icon" onClick={prevStep} />
+        </div>
+        <div className="navigation">
+          <GrFormNext className="nav-icon" onClick={nextStep} />
+        </div>
       </div>
     </div>
   );

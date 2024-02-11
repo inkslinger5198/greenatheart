@@ -28,6 +28,10 @@
   overflow: hidden;
   cursor: pointer;
   margin: 20px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
   transition: 0.3s ease;
   color: var(--black);
   font-family: var(--font-family);
@@ -90,11 +94,7 @@
   justify-content: center;
   font-size: 16px;
   padding: 0;
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  height: 30px;
-  width: 30px;
+  
 }
 
 .faq-toggle:focus {
@@ -103,6 +103,7 @@
 
 .faq.active .faq-toggle {
   background-color: var(--black);
+  padding: 0.3rem;
 }
 
 .faq-toggle .fates{
@@ -177,6 +178,10 @@
   .floating-btn {
     right: 10px;
   }
+  .faqs-container
+  {
+    width: 100%;
+  }
 
   .faq-title {
     font-size: 15px;
@@ -201,6 +206,9 @@
     font-size: 9px;
   }
   .faq.active .faq-title {
+    font-size: 12px;
+  }
+  .faq-toggle {
     font-size: 12px;
   }
 }

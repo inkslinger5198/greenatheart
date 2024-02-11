@@ -42,8 +42,10 @@ const FAQ = () => {
 
     const FaqItem = ({ title, content }) => (
         <div className="faq">
+          <div className='faq-content'>
             <h3 className="faq-title">{title}</h3>
             <p className="faq-text">{content}</p>
+            </div>
             <button className="faq-toggle">
                 <i className="fas facdwn"><FaChevronDown /></i>
                 <i className="fas fates"><FaTimes /></i>

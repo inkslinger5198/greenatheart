@@ -1,95 +1,198 @@
 .progress-bar-container {
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    justify-content: center;
-    gap: 2.5rem;
-    padding: 6rem 4rem;
-    
-  }
-  .step-progress
-  {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 90%;
-    margin-bottom: 1rem;
+  font-family: "Arial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 6rem 4rem;
+}
+
+.step-progress {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 90%;
+  margin-bottom: 1rem;
+}
+
+.nav-icon {
+  font-size: 2rem;
+}
+
+.nav-icon:hover {
+  color: grey;
+}
+
+.progress-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 3rem;
+  width: 100%;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.step-title {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.completed .step-number {
+  background-color: #4caf50;
+}
+
+.navigation {
+  display: flex;
+  gap: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.step-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  width: 70%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.step-card h3 {
+  margin: 0 0 10px 0;
+}
+
+.step-card p {
+  margin: 0;
+  text-align: left;
+}
+
+.phone-nav-btn {
+  display: none;
+}
+
+/* Extra Large Screens */
+@media screen and (max-width: 2560px) and (min-width: 1500px) {
+  .nav-icon {
+    font-size: 3rem; /* Larger icons for larger screens */
   }
 
-  .nav-icon
+  .step-title, .step-card h3, .step-card p {
+    font-size: 2rem; /* Slightly larger text for readability */
+  }
+  .step-number {
+    width: 80px;
+    height: 80px;
+  }
+  .step-card {
+    width: 80%;
+  }
+  .progress-bar
   {
     font-size: 2rem;
   }
+}
 
-  .nav-icon:hover
-  {
-    color: grey;
+/* Desktops and Laptops */
+@media screen and (max-width: 1024px) {
+  .progress-bar-container {
+    padding: 4rem 2rem;
   }
-  .progress-bar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 3rem;
-    width: 100%;
-  }
-  
-  .step {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: all 0.3s ease;
-  }
-  
-  .step-number {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #ddd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .step-title {
-    font-size: 1rem;
-    text-align: center;
-  }
-  
-  .completed .step-number {
-    background-color: #4caf50; /* Green background for completed steps */
-  }
-  
-  .navigation {
-    display: flex;
-    gap: 10px;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  
   .step-card {
+    width: 80%;
+  }
+  .step-number, .nav-icon {
+    font-size: 1.25rem;
+  }
+  .step-title, .step-card h3, .step-card p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+  .progress-bar-container {
+    padding: 2rem 1rem;
+  }
+  .step-card {
+    width: 90%;
+  }
+  .phone-nav-btn {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    width: 50rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
+    width: 80%;
+    justify-content: space-between;
+  }
+  .progress-bar
+  {
+    gap: 2rem;
+  }
+  .step-number {
+    width: 40px;
+    height: 40px;
+    
+  }
+  .lap-nav-btn {
+    display: none;
+  }
+  .step-title, .step-card h3, .step-card p {
+    font-size: 1rem;
+  }
+}
+
+/* Large Phones */
+@media screen and (max-width: 550px) {
+  .step-progress
+  {
+    display: none;
+  }
+  .step {
+    display: none; /* Hide all steps by default */
+  }
+
+  .step.current {
+    display: flex; /* Only display the current step */
+  }
+
+  .step-card h3, .step-card p {
+    font-size: 1rem; /* Ensure minimum font size of 1rem */
   }
   
-  .step-card h3 {
-    margin: 0 0 10px 0;
+  .progress-bar {
+    gap: 0.5rem;
   }
-  
-  .step-card p {
-    margin: 0;
+
+  .step-number {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem; /* Adjusted for smaller screen */
   }
-  
+
+  .step-title {
+    display: none; /* Optionally hide the title for smaller screens */
+  }
+}

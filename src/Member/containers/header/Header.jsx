@@ -11,7 +11,7 @@ const Header = () => {
         <img src={img} alt="water" />
       </div>
       <div className="overlay"></div>
-      <div className="contact_header-text">
+      <div className=" member_header-text contact_header-text">
         <div className="contact_header-left">
           <h1>Join Now</h1>
           <p>Help Us Grow More Trees..</p>

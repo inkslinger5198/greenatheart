@@ -9,30 +9,113 @@
 }
 
 .about-slider {
-  width: 90%; /* Adjust the width of the slider */
+  width: 90%;
   margin: 1rem;
   padding: 1rem;
-  /* Explicit height might be necessary depending on your design */
 }
 
 /* Rest of your styles */
 
 .slide {
-  padding: 2rem 4rem;
+  padding: 2rem 1rem;
   box-sizing: border-box;
   text-align: center;
   border-radius: 12px;
   margin-bottom: 1rem;
-
 }
-
-/* Add additional CSS for styling slick controls as needed */
-
-
+.about-slider-container,
+.about-slider,
+.slide {
+  font-size: 1.25rem;
+}
+.about-slider-controls-phone {
+  display: none;
+}
 
 .about-content-btn button {
   background: none;
   font-size: 2rem;
   color: var(--black);
   border: none;
+}
+
+/* Extra Large Screens, 4K */
+@media screen and (max-width: 2560px) and (min-width: 1500px) {
+  .about-slider-container,
+  .about-slider,
+  .slide,
+  .about-content-btn button {
+    /* Adjust the size and padding for larger screens */
+    font-size: 1.25em; /* Increase base font size */
+  }
+}
+
+/* Large Screens, Wide Monitors */
+@media screen and (max-width: 1024px) {
+  .about-slider-container {
+    padding: 1rem;
+  }
+  .about-slider,
+  .slide {
+    width: 90%; /* Maximize the use of space */
+    padding: 0.5rem;
+  }
+  .about-content-btn button {
+    font-size: 1.5rem; /* Adjust button size */
+  }
+}
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+  .about-slider-container {
+    padding: 0.5rem;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  .about-slider,
+  .slide {
+    padding: 0.25rem;
+  }
+  .about-content-btn button {
+    font-size: 1.25rem;
+  }
+  .about-slider-controls {
+    display: none;
+  }
+  .about-slider-controls-phone {
+    display: flex;
+    flex-direction: row;
+    margin: 2rem 0;
+    font-size: 1.5rem;
+    justify-content: space-between;
+    width: 70%;
+  }
+}
+
+/* Larger Phones */
+@media screen and (max-width: 550px) {
+  .about-slider-container,
+  .about-slider,
+  .slide {
+    /* Further adjust for smaller screens */
+    font-size: 1.25rem; /* Scale down text and elements */
+  }
+}
+
+/* Smaller Phones */
+@media screen and (max-width: 400px) {
+  .about-slider-container,
+  .about-slider,
+  .slide {
+    font-size: 1rem; /* Even smaller text and elements for tiny screens */
+  }
+}
+
+/* Smallest Screens */
+@media screen and (max-width: 320px) {
+  .about-slider-container,
+  .about-slider,
+  .slide {
+    font-size: 0.9rem; /* Smallest adjustments for readability */
+  }
 }

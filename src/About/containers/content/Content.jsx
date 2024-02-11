@@ -61,6 +61,18 @@ const Content = () => {
           ))}
         </Slider>
       </div>
+      <div className="about-slider-controls-phone">
+        <div className="about-content-btn" aria-label="Previous slide">
+          <button onClick={previous} type="button">
+            <GrFormPrevious />
+          </button>
+        </div>
+        <div className="about-content-btn" aria-label="Previous slide">
+          <button onClick={next} type="button">
+            <GrFormNext />
+          </button>
+        </div>
+      </div>
       <div className="about-slider-controls">
         <div className="about-content-btn" aria-label="Previous slide">
           <button onClick={next} type="button">

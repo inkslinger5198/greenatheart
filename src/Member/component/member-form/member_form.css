@@ -61,3 +61,17 @@
     text-align: center;
     border-radius: 5px;
 }
+
+@media screen and (max-width:2560px) and (min-width:1500px){
+    
+    .member_form input
+    {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    .member_form button
+    {
+        font-size: 2rem;
+        padding: 1rem 4rem;
+    }
+}

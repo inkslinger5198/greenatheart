@@ -1,5 +1,5 @@
 :root {
-  --height-small: 55rem;
+  --height-small: 60rem;
   --height-large: 80rem;
 }
 .about_header {
@@ -74,4 +74,8 @@
   .about_header-text p {
     font-size: 2rem;
   }
+}
+
+@media screen and (max-width: 768px) {
+  
 }

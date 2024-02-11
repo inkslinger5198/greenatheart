@@ -4,7 +4,6 @@
   justify-content: center;
   align-items: center;
   position: relative;
-
 }
 
 .donate_picture-img {
@@ -46,7 +45,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  
 }
 
 .donate_picture-text h1 {
@@ -66,5 +64,40 @@
   .donate_picture-img img {
     height: var(--height-large);
   }
+  .overlay {
+    height: var(--height-large);
+  }
+  .contact_header-text {
+    margin-top: 2rem;
+    width: 75%;
+  }
+
+  .donate_picture-text h1 {
+    font-size: 6rem;
+    text-transform: uppercase;
+  }
+
+  .donate_picture-text p,
+  .payment-gateway-container h1 {
+    font-size: 2.75rem!important;
+  }
+  .payment-gateway-container {
+    width: 700px;
+    padding: 3rem;
+  }
 }
 
+@media screen and (max-width: 1024px)
+{
+  .donate_picture-text {
+    width: 80%;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .donate_picture-text {
+    flex-direction: column;
+    width: 100%;
+  }
+}

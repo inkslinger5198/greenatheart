@@ -61,3 +61,43 @@
 .submit-btn:hover {
     background-color: #28a942;
 }
+
+
+@media screen and (max-width: 2560px) and (min-width: 1500px) {
+    .payment-gateway-container {
+        max-width: 700px;
+        padding: 5rem 3rem;
+    }
+    .form-group input, .submit-btn 
+    {
+        padding: 15px;
+        font-size: 28px;
+
+    }
+    .submit-btn
+    {
+        padding: 15px 30px;
+    }
+    .form-group input
+    {
+        margin-bottom: 1rem;
+    }
+    
+}
+
+@media screen and (max-width: 1024px)
+{
+    .payment-gateway-container
+    {
+        max-width: 600px;
+        padding: 2rem;
+    }
+
+}
+@media screen and (max-width: 550px) {
+    .payment-gateway-container
+    {
+        max-width: 300px;
+        padding: 2rem;
+    }
+}
