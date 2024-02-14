@@ -8,6 +8,12 @@
   padding: 6rem 4rem;
 }
 
+.progress-bar-container h1
+{
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
 .step-progress {
   display: flex;
   flex-direction: row;

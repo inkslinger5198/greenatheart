@@ -3,6 +3,7 @@
   flex-direction: column;
   background: var(--color-dark);
   padding: 5rem 0rem;
+
 }
 
 .Banner-header {
@@ -42,6 +43,12 @@
   width: 20rem;
   position: relative;
   overflow: hidden;
+  height: 32.5rem;
+}
+
+.Banner-card-body
+{
+  height: 4rem;
 }
 
 .Banner-card img {
