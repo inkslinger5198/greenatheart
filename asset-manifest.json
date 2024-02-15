@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/greenatheart/static/css/main.74e5dc1f.css",
-    "main.js": "/greenatheart/static/js/main.03304f5e.js",
+    "main.css": "/greenatheart/static/css/main.2fc0396d.css",
+    "main.js": "/greenatheart/static/js/main.f997f2de.js",
     "static/media/pexels-valentin-s-589802.jpg": "/greenatheart/static/media/pexels-valentin-s-589802.67b041c0320cfb3385b9.jpg",
     "static/media/pexels-eberhard-grossgasteiger-2310641.jpg": "/greenatheart/static/media/pexels-eberhard-grossgasteiger-2310641.0ec51032edae53501467.jpg",
     "static/media/16.jpg": "/greenatheart/static/media/16.885d30617361a91af380.jpg",
@@ -26,11 +26,11 @@
     "static/media/slick.ttf": "/greenatheart/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/greenatheart/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/greenatheart/index.html",
-    "main.74e5dc1f.css.map": "/greenatheart/static/css/main.74e5dc1f.css.map",
-    "main.03304f5e.js.map": "/greenatheart/static/js/main.03304f5e.js.map"
+    "main.2fc0396d.css.map": "/greenatheart/static/css/main.2fc0396d.css.map",
+    "main.f997f2de.js.map": "/greenatheart/static/js/main.f997f2de.js.map"
   },
   "entrypoints": [
-    "static/css/main.74e5dc1f.css",
-    "static/js/main.03304f5e.js"
+    "static/css/main.2fc0396d.css",
+    "static/js/main.f997f2de.js"
   ]
 }
