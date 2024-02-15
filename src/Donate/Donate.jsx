@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import "./donate.css";
 
-import { Picture, ProgressBar, Steps } from "./containers";
+import { Picture, ProgressBar, FAQ } from "./containers";
 const Donate = () => {
   useEffect(() => {
     // Set the document title for the main page
@@ -16,6 +16,7 @@ const Donate = () => {
     <div className="donate">
       <Picture />
       <ProgressBar />
+      <FAQ />
     </div>
   );
 };

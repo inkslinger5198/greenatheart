@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import './member.css';
 
-import { Header, ProgressBar } from './containers';
+import { FAQ, Header, ProgressBar } from './containers';
 
 const Member = () => {
   useEffect(() => {
@@ -17,6 +17,7 @@ const Member = () => {
     <div className="Member">
       <Header />
       <ProgressBar />
+      <FAQ />
     </div>
   )
 }

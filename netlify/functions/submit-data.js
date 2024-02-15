@@ -1,6 +1,6 @@
 const { google } = require('googleapis');
 
-// Load service account details securely
+// Assuming your service account details are securely stored and accessible
 const serviceAccount = require('../../src/Contact/services/greenatheart-028bd6756392.json');
 
 const jwtClient = new google.auth.JWT(
@@ -11,15 +11,27 @@ const jwtClient = new google.auth.JWT(
 );
 
 exports.handler = async (event) => {
-  // Only allow POST
+  const headers = {
+    'Access-Control-Allow-Origin': '*', // Or specify your GitHub Pages URL for security
+    'Access-Control-Allow-Headers': 'Content-Type',
+    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+    'Content-Type': 'application/json',
+  };
+
+  // Handle OPTIONS request for CORS preflight
+  if (event.httpMethod === 'OPTIONS') {
+    return {
+      statusCode: 200,
+      headers,
+      body: '',
+    };
+  }
+
+  // Only allow POST for the actual request
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
-      headers: {
-        'Access-Control-Allow-Origin': '*', // Adjust as necessary for security
-        'Access-Control-Allow-Headers': 'Content-Type',
-        'Access-Control-Allow-Methods': 'POST',
-      },
+      headers,
       body: 'Method Not Allowed',
     };
   }
@@ -46,21 +58,14 @@ exports.handler = async (event) => {
     await sheets.spreadsheets.values.append(request);
     return {
       statusCode: 200,
-      headers: {
-        'Access-Control-Allow-Origin': '*', // Adjust as necessary for security
-        'Access-Control-Allow-Headers': 'Content-Type',
-        'Content-Type': 'application/json',
-      },
+      headers,
       body: JSON.stringify({ message: 'Data submitted successfully.' }),
     };
   } catch (error) {
     console.error('Error submitting data to Google Sheets:', error);
     return {
       statusCode: 500,
-      headers: {
-        'Access-Control-Allow-Origin': '*', // Adjust as necessary for security
-        'Content-Type': 'application/json',
-      },
+      headers,
       body: JSON.stringify({ error: 'Failed to submit data' }),
     };
   }
