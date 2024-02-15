@@ -23,6 +23,10 @@
   border-radius: 12px;
   margin-bottom: 1rem;
 }
+.slide h2
+{
+  margin-bottom: 1.5rem;
+}
 .about-slider-container,
 .about-slider,
 .slide {
