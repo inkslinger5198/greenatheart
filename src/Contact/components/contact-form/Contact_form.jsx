@@ -31,7 +31,7 @@ const ContactForm = () => {
       };
 
       // Replace with your server's endpoint
-      const response = await axios.post('http://localhost:3000/submit-data', payload);
+      const response = await axios.post('https://greenatheart.netlify.app/.netlify/functions/submit-data', payload);
 
       console.log("Data successfully sent to the server!", response);
 

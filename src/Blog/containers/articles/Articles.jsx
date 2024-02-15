@@ -14,7 +14,7 @@ function Articles() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/blog-posts')
+    fetch('https://greenatheart.netlify.app/.netlify/functions/blog-posts')
       .then(response => response.json())
       .then(data => setPosts(data))
       .catch(error => console.error('Error fetching posts:', error));

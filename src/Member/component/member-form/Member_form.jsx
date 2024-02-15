@@ -33,7 +33,7 @@ const MemberForm = () => {
 
     try {
       setLoading(true);
-      const response = await axios.post('http://localhost:3000/submit-data', finalFormData);
+      const response = await axios.post('https://greenatheart.netlify.app/.netlify/functions/submit-data', finalFormData);
 
       console.log("Data successfully sent to the server!", response);
       setShowConfirmation(true);
