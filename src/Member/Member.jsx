@@ -17,7 +17,7 @@ const Member = () => {
     <div className="Member">
       <Header />
       <ProgressBar />
-      <FAQ />
+      {/*<FAQ />*/}
     </div>
   )
 }

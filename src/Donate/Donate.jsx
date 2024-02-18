@@ -16,7 +16,7 @@ const Donate = () => {
     <div className="donate">
       <Picture />
       <ProgressBar />
-      <FAQ />
+      {/*<FAQ />*/}
     </div>
   );
 };
