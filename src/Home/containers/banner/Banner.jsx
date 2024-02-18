@@ -51,7 +51,7 @@ const Banner = () => {
               "Want to plant a tree yourself? Are you confused about what to plant? Try out our plant recommendation system",
             img: img4,
             actionText: "Volunteer",
-            link: "/volunteer",
+            link: "",
           },
           {
             text: "Socials",
@@ -69,6 +69,9 @@ const Banner = () => {
             onClick={() => handleCardClick(card.link)}
           >
             <h2>{card.title}</h2>
+            {card.title === "Flora" && (
+              <div className="under-development-tag">UNDER DEVELOPMENT</div>
+            )}
             <p className="Banner-card-body">{card.subhead}</p>
             <img src={card.img} alt={`Banner ${index + 1}`} />
             <button>{card.actionText}</button>

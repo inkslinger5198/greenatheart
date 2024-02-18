@@ -31,7 +31,7 @@ const FAQ = () => {
       },
       {
         title: 'What types of trees are suitable for planting in my region?',
-        content: 'The suitability of trees for planting depends on your region\'s climate, soil conditions, and local ecosystem. We have our own AI ML based plant recommnedation system called Flora, which takes all these various factors into consideration and recommends the best trees for your region.',
+        content: 'The suitability of trees for planting depends on your region\'s climate, soil conditions, and local ecosystem. We have our own AI ML based plant recommnedation system called Flora under development, which takes all these various factors into consideration and recommends the best trees for your region. Additionally you can check out our blog for advice and updates.',
       },
       {
         title: 'Why should I plant a tree?',

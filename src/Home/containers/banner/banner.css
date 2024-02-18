@@ -92,6 +92,16 @@
   cursor: pointer;
 }
 
+.under-development-tag {
+  background-color: red;
+  color: white;
+  padding: 2px 5px;
+  font-size: 0.8em;
+  
+  border-radius: 5px;
+}
+
+
 .Banner-card:hover .card-overlay {
   opacity: 1;
 }
