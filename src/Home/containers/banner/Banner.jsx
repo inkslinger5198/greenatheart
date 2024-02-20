@@ -60,7 +60,7 @@ const Banner = () => {
               "Follow us on our socials for regular updates and be part of the Greenheart community.",
             img: img2,
             actionText: "Socials",
-            link: "https://instagram.com",
+            link: "https://www.instagram.com/greenatheart._/",
           },
         ].map((card, index) => (
           <div

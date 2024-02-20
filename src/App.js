@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./Home/Home";
 import About from "./About/About";
 import Donate from "./Donate/Donate";
+import Gateway from "./gateway/Gateway";
 import Member from "./Member/Member";
 import Blog from "./Blog/Blog";
 import Contact from "./Contact/Contact";
@@ -38,6 +39,7 @@ const App = () => {
             <Route path="/donate" element={<Donate />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/gateway" element={<Gateway />} />
           </Routes>
 
           <Footer />
